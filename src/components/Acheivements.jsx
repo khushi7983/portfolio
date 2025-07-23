@@ -13,7 +13,7 @@ function Achievements() {
 
         <div className="container mx-auto px-6 md:px-12 lg:px-24 py-12 relative">
           <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-teal-200 mb-4 pb-6">
+            <h2 className="pt-20 text-4xl md:text-5xl font-bold text-teal-200 mb-4 pb-6">
               Achievements & Certifications
             </h2>
           </div>

@@ -93,7 +93,7 @@ function Experience() {
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-24 relative z-10 max-w-6xl">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-200 via-emerald-300 to-teal-400 bg-clip-text text-transparent mb-2 sm:mb-4">
+          <h2 className="pt-20 text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-200 via-emerald-300 to-teal-400 bg-clip-text text-transparent mb-2 sm:mb-4">
             Professional Experience
           </h2>
           <div className="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-teal-500 to-emerald-500 mx-auto rounded-full mb-2 sm:mb-4"></div>

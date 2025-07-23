@@ -42,7 +42,7 @@ function About() {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10 max-w-7xl">
           {/* Header Section */}
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-cyan-300 to-purple-300 mb-4">
+            <h2 className="pt-20 text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-cyan-300 to-purple-300 mb-4">
               About Me
             </h2>
 

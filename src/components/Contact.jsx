@@ -87,7 +87,7 @@ function Contact() {
       <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-cyan-200 mb-3">
+          <h2 className="pt-20 text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-cyan-200 mb-3">
             Let's Connect
           </h2>
         </div>

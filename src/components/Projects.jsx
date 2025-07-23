@@ -46,7 +46,7 @@ function Projects() {
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 relative max-w-6xl">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-cyan-200 mb-3">
+          <h2 className="pt-20 text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-100 to-cyan-200 mb-3">
             Crafted Projects
           </h2>
         </div>

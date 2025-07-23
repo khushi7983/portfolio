@@ -5,13 +5,12 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import About from './components/About';
 import Services from './components/Experience';
-// import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Achievements from './components/Acheivements'
-import NavBar from './components/Navbar'
+import Navbar from './components/Navbar';
 
 
 export const ThemeContext = createContext();
@@ -31,7 +30,7 @@ function App() {
   return (
     <>
        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <NavBar />
+      <Navbar />
       <Hero />
       <About />
       <Skills />

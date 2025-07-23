@@ -6,7 +6,7 @@ import {
   FaFileDownload,
 } from "react-icons/fa";
 
-function NavBar() {
+function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -298,4 +298,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Navbar;

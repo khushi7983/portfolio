@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { useEffect } from 'react'
-import NavBar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import About from './components/About';
@@ -12,6 +11,9 @@ import Services from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Achievements from './components/Acheivements'
+import NavBar from './components/NavBar'
 
 
 export const ThemeContext = createContext();
@@ -34,8 +36,10 @@ function App() {
       <NavBar />
       <Hero />
       <About />
+      <Skills />
       <Projects />
       <Experience />
+      <Achievements />
       {/* <Services /> */}
       {/* <Blog /> */}
       <Contact />

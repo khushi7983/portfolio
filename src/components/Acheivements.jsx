@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trophy, Award, Star, Code, Database, Layout } from 'lucide-react';
-import NavBar from './NavBar';
+import NavBar from './Navbar';
 
 function Achievements() {
   return (

@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Achievements from './components/Acheivements'
-import NavBar from './components/NavBar'
+import NavBar from './components/Navbar'
 
 
 export const ThemeContext = createContext();

@@ -1,225 +1,296 @@
-import React, { useState, useEffect } from 'react';
-import { Code, Award, Briefcase, MapPin, User, Zap, Target, Star, Trophy, ChevronRight, GraduationCap, Heart } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  User,
+  Target,
+  Briefcase,
+  MapPin,
+  Heart,
+  GraduationCap,
+  Award,
+  Code,
+  Zap,
+  Globe,
+  Star,
+  Rocket,
+  Coffee,
+  BookOpen,
+  Lightbulb,
+} from "lucide-react";
+import image from "../assets/Khushi.jpg";
 
 function About() {
-  const [activeTab, setActiveTab] = useState('story');
-  const [skillsAnimation, setSkillsAnimation] = useState(false);
+  const [typedText, setTypedText] = useState("");
+  return (
+    <div>
+      <section
+        id="about"
+        className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-teal-800 relative overflow-hidden"
+      >
+        {/* Background Effects */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-8 sm:top-10 left-8 sm:left-10 w-32 sm:w-40 h-32 sm:h-40 bg-teal-500/10 rounded-full blur-xl sm:blur-2xl animate-pulse"></div>
+          <div
+            className="absolute bottom-8 sm:bottom-10 right-8 sm:right-10 w-32 sm:w-48 h-32 sm:h-48 bg-purple-500/10 rounded-full blur-xl sm:blur-2xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "2s" }}
+          ></div>
+        </div>
 
-  const skills = [
-    { name: "HTML", level: 95, category: "frontend" },
-    { name: "CSS", level: 90, category: "frontend" },
-    { name: "JavaScript", level: 88, category: "frontend" },
-    { name: "React", level: 85, category: "frontend" },
-    { name: "Next.js", level: 80, category: "frontend" },
-    { name: "Tailwind CSS", level: 92, category: "frontend" },
-    { name: "Node.js", level: 75, category: "backend" },
-    { name: "MongoDB", level: 70, category: "backend" },
-    { name: "Figma", level: 85, category: "design" }
-  ];
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10 max-w-7xl">
+          {/* Header Section */}
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 via-cyan-300 to-purple-300 mb-4">
+              About Me
+            </h2>
 
-  const achievements = [
-    { title: "HackFinance 2025", subtitle: "Top 30 - IIT Delhi", icon: <Trophy className="w-5 h-5" />, color: "from-yellow-500 to-orange-500" },
-    { title: "Code Hive 2025", subtitle: "Top 20 Finalist", icon: <Award className="w-5 h-5" />, color: "from-purple-500 to-pink-500" },
-    { title: "ReactJS Certified", subtitle: "Infosys Springboard", icon: <Star className="w-5 h-5" />, color: "from-blue-500 to-cyan-500" },
-    { title: "Generative AI", subtitle: "Infosys Springboard", icon: <Zap className="w-5 h-5" />, color: "from-green-500 to-teal-500" }
-  ];
-
-  const tabs = [
-    { id: 'story', label: 'About Me', icon: <User className="w-4 h-4" /> },
-    { id: 'skills', label: 'Skills', icon: <Code className="w-4 h-4" /> }
-  ];
-
-  useEffect(() => {
-    if (activeTab === 'skills') {
-      setTimeout(() => setSkillsAnimation(true), 200);
-    } else {
-      setSkillsAnimation(false);
-    }
-  }, [activeTab]);
-
-  const renderContent = () => {
-    switch (activeTab) {
-      case 'story':
-        return (
-          <div className="space-y-8 animate-fade-in">
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-teal-500/25">
-                <User className="w-8 h-8 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-teal-100 mb-3">Hello, I'm Khushi Panwar</h3>
-                <p className="text-gray-300 leading-relaxed text-lg">
-                  A passionate B.Tech student in Computer Science and Engineering (Data Science) at Ajay Kumar Garg Engineering College. 
-                  Born and raised in Ghaziabad, I discovered my love for technology at the age of 15 when I built my first website.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/25">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-teal-100 mb-3">Mission</h3>
-                <p className="text-gray-300 leading-relaxed text-lg">
-                  To craft fast, accessible, and visually stunning web experiences. I believe in blending creativity with functionality 
-                  to create solutions that make a real impact, like my Sustainable Finance Platform and PropVista.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/25">
-                <Briefcase className="w-8 h-8 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-teal-100 mb-3">Experience</h3>
-                <p className="text-gray-300 leading-relaxed text-lg mb-4">
-                  I interned as a Web Developer at Indux Solar, honing my skills in React, Next.js, and Tailwind CSS. I'm a quick learner, 
-                  thrive in team settings, and love playing badminton to stay focused. I'm eager to contribute to a dynamic team and grow professionally.
-                </p>
-                <p className="text-gray-300 leading-relaxed text-lg">
-                  <strong className="text-teal-200">Achievements:</strong> Ranked Top 30 at HackFinance 2025 (IIT Delhi) and Top 20 at Code Hive 2025; 
-                  earned certifications in ReactJS and Generative AI from Infosys Springboard.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-4 mt-8">
-              <div className="flex items-center gap-3 bg-teal-600/20 px-6 py-3 rounded-full backdrop-blur-sm border border-teal-400/30 hover:bg-teal-600/30 transition-all duration-300">
-                <MapPin className="w-5 h-5 text-teal-300" />
-                <span className="text-teal-100 font-medium">Ghaziabad, India</span>
-              </div>
-              <div className="flex items-center gap-3 bg-purple-600/20 px-6 py-3 rounded-full backdrop-blur-sm border border-purple-400/30 hover:bg-purple-600/30 transition-all duration-300">
-                <Heart className="w-5 h-5 text-purple-300" />
-                <span className="text-purple-100 font-medium">Badminton Enthusiast</span>
-              </div>
-            </div>
           </div>
-        );
 
-      case 'skills':
-        return (
-          <div className="space-y-8 animate-fade-in">
-            {['frontend', 'backend', 'design'].map((category) => (
-              <div key={category} className="space-y-6">
-                <h4 className="text-2xl font-bold text-teal-100 capitalize flex items-center gap-4">
-                  <div className={`w-4 h-4 rounded-full ${
-                    category === 'frontend' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 
-                    category === 'backend' ? 'bg-gradient-to-r from-green-500 to-teal-500' : 'bg-gradient-to-r from-purple-500 to-pink-500'
-                  } shadow-lg`}></div>
-                  {category} {category === 'frontend' ? 'Development' : category === 'backend' ? 'Development' : 'Tools'}
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {skills.filter(skill => skill.category === category).map((skill, index) => (
-                    <div key={index} className="space-y-3 p-6 bg-gradient-to-r from-gray-800/60 to-gray-900/60 rounded-xl border border-gray-700/50 backdrop-blur-sm hover:border-teal-400/30 transition-all duration-300">
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-200 font-semibold text-lg">{skill.name}</span>
-                        <span className="text-teal-300 font-bold">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                        <div 
-                          className={`h-full bg-gradient-to-r ${
-                            category === 'frontend' ? 'from-blue-500 to-cyan-500' : 
-                            category === 'backend' ? 'from-green-500 to-teal-500' : 'from-purple-500 to-pink-500'
-                          } rounded-full transition-all duration-1000 ease-out shadow-lg`}
-                          style={{ 
-                            width: skillsAnimation ? `${skill.level}%` : '0%',
-                            transitionDelay: `${index * 150}ms`
-                          }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
+          {/* Main Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Left Column - Personal Story */}
+            <div className="lg:col-span-2 space-y-6 md:space-y-8">
+              {/* Personal Journey */}
+              <div className="bg-gray-800/60 rounded-xl p-6 md:p-8 border border-gray-700/30 backdrop-blur-sm shadow-xl hover:shadow-teal-500/20 transition-all duration-500">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Rocket className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold text-teal-100 mb-2">
+                      My Journey
+                    </h3>
+                    <div className="w-16 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full"></div>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+                  Hi, I'm{" "}
+                  <span className="text-teal-300 font-semibold">
+                    Khushi Panwar
+                  </span>
+                  , a passionate full-stack developer currently pursuing B.Tech
+                  in Computer Science (Data Science) at Ajay Kumar Garg
+                  Engineering College, Ghaziabad. My coding adventure began at
+                  15 when I built my first website, igniting a lifelong passion
+                  for creating digital solutions.
+                </p>
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                  Today, I specialize in building modern web applications using
+                  cutting-edge technologies like React.js, Next.js, and Node.js.
+                  I'm particularly drawn to sustainable technology and fintech
+                  solutions, as evidenced by my recent success at HackFinance
+                  2025 where I ranked in the Top 30.
+                </p>
+              </div>
+
+              {/* Mission & Vision */}
+              <div className="bg-gray-800/60 rounded-xl p-6 md:p-8 border border-gray-700/30 backdrop-blur-sm shadow-xl hover:shadow-purple-500/20 transition-all duration-500">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold text-teal-100 mb-2">
+                      Mission & Vision
+                    </h3>
+                    <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-teal-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                    <p className="text-gray-300 text-base md:text-lg">
+                      <span className="text-teal-300 font-semibold">
+                        Design
+                      </span>{" "}
+                      fast, accessible, and impactful web solutions that solve
+                      real-world challenges
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                    <p className="text-gray-300 text-base md:text-lg">
+                      <span className="text-purple-300 font-semibold">
+                        Bridge
+                      </span>{" "}
+                      the gap between creativity and technical expertise in
+                      every project
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                    <p className="text-gray-300 text-base md:text-lg">
+                      <span className="text-cyan-300 font-semibold">
+                        Contribute
+                      </span>{" "}
+                      to sustainable technology and green finance solutions
+                    </p>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-        );
-
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <section id="about" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-teal-900 relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-teal-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
-      </div>
-
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 py-20 relative">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 bg-teal-600/20 px-6 py-3 rounded-full mb-8 backdrop-blur-sm border border-teal-400/30 hover:bg-teal-600/30 transition-all duration-300">
-            <User className="w-5 h-5 text-teal-300" />
-            <span className="text-teal-200 font-semibold">Get to know me</span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-100 via-cyan-200 to-teal-100 mb-6">
-            About Me
-          </h2>
-          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            Passionate developer crafting digital experiences with creativity, precision, and a touch of innovation
-          </p>
-        </div>
-
-        <div className="max-w-7xl mx-auto">
-          {/* Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? 'bg-gradient-to-r from-teal-600 to-teal-700 text-white shadow-xl shadow-teal-500/25 scale-105'
-                    : 'bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-teal-200 border border-gray-700/50 hover:border-teal-400/50 hover:scale-105'
-                } backdrop-blur-sm`}
-              >
-                {tab.icon}
-                <span className="text-lg">{tab.label}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Content Area */}
-          <div className="bg-gradient-to-br from-gray-800/40 via-gray-900/40 to-gray-800/40 backdrop-blur-sm rounded-3xl p-8 md:p-16 border border-gray-700/50 min-h-[600px] shadow-2xl">
-            {renderContent()}
-          </div>
-        </div>
-
-        {/* Bottom Stats */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-5xl mx-auto">
-          {[
-            { number: '3+', label: 'Years Coding', icon: <Code className="w-8 h-8" /> },
-            { number: '10+', label: 'Projects Built', icon: <Briefcase className="w-8 h-8" /> },
-            { number: '4+', label: 'Certifications', icon: <Award className="w-8 h-8" /> },
-            { number: '2+', label: 'Hackathon Wins', icon: <Trophy className="w-8 h-8" /> }
-          ].map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-teal-600 to-cyan-600 rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-all duration-300 shadow-xl shadow-teal-500/25 group-hover:shadow-teal-500/40">
-                {stat.icon}
-              </div>
-              <div className="text-4xl font-black text-teal-100 mb-2">{stat.number}</div>
-              <div className="text-gray-400 font-medium">{stat.label}</div>
             </div>
-          ))}
-        </div> */}
-      </div>
 
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out;
-        }
-      `}</style>
-    </section>
+            {/* Right Column - Quick Facts */}
+            <div className="space-y-6 md:space-y-8">
+              {/* Education */}
+              <div className="bg-gray-800/60 rounded-xl p-6 border border-gray-700/30 backdrop-blur-sm shadow-xl hover:shadow-blue-500/20 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center">
+                    <GraduationCap className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-teal-100">Education</h3>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-gray-300 text-sm md:text-base font-medium">
+                    B.Tech in Computer Science
+                  </p>
+                  <p className="text-gray-400 text-sm">
+                    (Data Science Specialization)
+                  </p>
+                  <p className="text-gray-400 text-sm">AKGEC, Ghaziabad</p>
+                  <p className="text-teal-300 text-sm font-medium">
+                    2022 – 2026
+                  </p>
+                </div>
+              </div>
+
+
+              {/* Achievements Highlight */}
+              <div className="bg-gray-800/60 rounded-xl p-6 border border-gray-700/30 backdrop-blur-sm shadow-xl hover:shadow-yellow-500/20 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center">
+                    <Award className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-teal-100">
+                    Recent Wins
+                  </h3>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-yellow-400" />
+                    <p className="text-gray-300 text-sm md:text-base">
+                      Top 30 - HackFinance 2025
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-yellow-400" />
+                    <p className="text-gray-300 text-sm md:text-base">
+                      Top 20 - Code Hive 2025
+                    </p>
+                  </div>
+                  <p className="text-gray-400 text-xs">
+                    Among 1000+ participants
+                  </p>
+                </div>
+              </div>
+
+              {/* Fun Facts */}
+              <div className="bg-gray-800/60 rounded-xl p-6 border border-gray-700/30 backdrop-blur-sm shadow-xl hover:shadow-pink-500/20 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-teal-100">
+                    Beyond Code
+                  </h3>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <Coffee className="w-4 h-4 text-pink-400" />
+                    <p className="text-gray-300 text-sm md:text-base">
+                      Badminton Enthusiast
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="w-4 h-4 text-pink-400" />
+                    <p className="text-gray-300 text-sm md:text-base">
+                      Tech Trend Explorer
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Lightbulb className="w-4 h-4 text-pink-400" />
+                    <p className="text-gray-300 text-sm md:text-base">
+                      Coding Challenge Solver
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section - Core Values */}
+          <div className="bg-gradient-to-r from-gray-800/60 to-gray-700/60 rounded-xl p-6 md:p-8 border border-gray-700/30 backdrop-blur-sm shadow-xl mt-8 md:mt-12">
+            <h3 className="text-xl md:text-2xl font-bold text-center text-teal-100 mb-6 md:mb-8">
+              Core Values & Approach
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+              <div className="text-center">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center">
+                  <Code className="w-7 h-7 text-white" />
+                </div>
+                <h4 className="text-base md:text-lg font-semibold text-teal-100 mb-2">
+                  Clean Code
+                </h4>
+                <p className="text-gray-300 text-sm md:text-base">
+                  Writing maintainable, scalable, and efficient code that stands
+                  the test of time
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                  <Globe className="w-7 h-7 text-white" />
+                </div>
+                <h4 className="text-base md:text-lg font-semibold text-teal-100 mb-2">
+                  User-Centric
+                </h4>
+                <p className="text-gray-300 text-sm md:text-base">
+                  Prioritizing accessibility, performance, and user experience
+                  in every project
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <h4 className="text-base md:text-lg font-semibold text-teal-100 mb-2">
+                  Innovation
+                </h4>
+                <p className="text-gray-300 text-sm md:text-base">
+                  Always exploring new technologies and approaches to solve
+                  complex problems
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <style jsx>{`
+          @keyframes fade-in {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-fade-in {
+            animation: fade-in 0.6s ease-out;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .animate-pulse,
+            .animate-fade-in {
+              animation: none !important;
+            }
+          }
+        `}</style>
+      </section>
+    </div>
   );
 }
 

@@ -15,6 +15,15 @@ function Projects() {
       category: "FinTech"
     },
     {
+      title: "ElevatePrep",
+      desc: "ElevatePrep is an innovative AI-powered platform designed to help users master their interview skills through practice sessions, real-time feedback",
+      link: "https://github.com/khushi7983/ElevatePrep",
+      tech: ["React.js", "Tailwind", "JavaScript", "CSS","Firebase"],
+      icon: <ShoppingCart className="w-6 h-6" />,
+      color: "from-teal-700 to-teal-500",
+      category: "Ed-Tech"
+    }
+    {
       title: "IMDB Clone",
       desc: "A full-featured IMDB clone built with Next.js and TMDB API, featuring movie discovery, lists, and details pages with a responsive Tailwind CSS layout.",
       link: "https://github.com/khushi7983/imdb-frontend",
@@ -162,5 +171,6 @@ function Projects() {
     </section>
   );
 }
+
 
 export default Projects;

@@ -18,7 +18,7 @@ function Projects() {
       title: "ElevatePrep",
       desc: "ElevatePrep is an innovative AI-powered platform designed to help users master their interview skills through practice sessions, real-time feedback",
       link: "https://github.com/khushi7983/ElevatePrep",
-      tech: ["React.js", "Tailwind", "JavaScript", "CSS","Firebase"],
+      tech: ["React.js","JavaScript", "CSS","Firebase"],
       icon: <ShoppingCart className="w-6 h-6" />,
       color: "from-teal-700 to-teal-500",
       category: "Ed-Tech"
@@ -32,15 +32,15 @@ function Projects() {
       color: "from-teal-500 to-cyan-600",
       category: "Entertainment"
     },
-    {
-      title: "Amazon Frontend",
-      desc: "An e-commerce platform replicating Amazon's interface using React.js and Tailwind CSS, with a dynamic shopping cart and order processing system.",
-      link: "https://github.com/khushi7983/amazon-React/tree/main/src",
-      tech: ["React.js", "Tailwind", "JavaScript", "CSS"],
-      icon: <ShoppingCart className="w-6 h-6" />,
-      color: "from-teal-700 to-teal-500",
-      category: "E-Commerce"
-    },
+    // {
+    //   title: "Amazon Frontend",
+    //   desc: "An e-commerce platform replicating Amazon's interface using React.js and Tailwind CSS, with a dynamic shopping cart and order processing system.",
+    //   link: "https://github.com/khushi7983/amazon-React/tree/main/src",
+    //   tech: ["React.js", "Tailwind", "JavaScript", "CSS"],
+    //   icon: <ShoppingCart className="w-6 h-6" />,
+    //   color: "from-teal-700 to-teal-500",
+    //   category: "E-Commerce"
+    // },
   ];
 
   return (
@@ -174,4 +174,5 @@ function Projects() {
 
 
 export default Projects;
+
 

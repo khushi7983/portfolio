@@ -54,7 +54,7 @@ function Navbar() {
   const handleResumeDownload = () => {
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/uc?export=download&id=1KK5lUW3UspU2-iZjcNI_Apq6jDPeQLWY";
+      "https://drive.google.com/file/d/1Za1EoJehj6euk-r9xOc0cKgcPKiHVnop/view?usp=sharing";
     link.download = "Khushi_Panwar_Resume.pdf";
     document.body.appendChild(link);
     link.click();

@@ -67,7 +67,7 @@ function Contact() {
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      link: "https://linkedin.com/in/yourprofile"
+      link: "https://www.linkedin.com/in/khushi-panwar-139323256/"
     }
   ];
 
@@ -238,5 +238,6 @@ function Contact() {
     </section>
   );
 }
+
 
 export default Contact;
